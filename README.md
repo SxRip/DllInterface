@@ -1,8 +1,6 @@
 # DllInterface
 ## The simple interface for working with DLL in dynamic style.
 
-### You can take this from "Module" folder.
-
 ### In the project exists 2 solution for demonstration the class work
 
 For compilation: 
@@ -12,6 +10,8 @@ For compilation:
   * Character set -> Use multibyte encoding
 
 ### (You must do this for both projects.)
+
+### You can take this class from "Module" folder.
 
 The class implemented with map (module name and own module).
 
