@@ -11,6 +11,8 @@ For compilation:
   * Configuration properties -> Additionally
   * Character set -> Use multibyte encoding
 
+(You must do this for both projects.)
+
 The class implemented with map (module name and own module).
 
 Methods:
