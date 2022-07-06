@@ -77,6 +77,5 @@ int main()
 	}
 
 	std::cout << "Test completed successfully." << std::endl;
-
 	return 0;
 }
