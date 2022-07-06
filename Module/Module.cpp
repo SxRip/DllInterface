@@ -21,13 +21,20 @@ DLL::~DLL()
 
 void DLL::pop_front() noexcept
 {
-	SafeFreeLibrary(_modules.begin()->second);
-	_modules.erase(_modules.begin()->first);
+	if (_modules.size() > 0)
+	{
+		SafeFreeLibrary(_modules.begin()->second);
+		_modules.erase(_modules.begin()->first);
+	}
 }
 
 void DLL::pop_back() noexcept
 {
-	_modules.erase(--(_modules.end()));
+	if (_modules.size() > 0)
+	{
+		SafeFreeLibrary((--(_modules.end()))->second);
+		_modules.erase(--(_modules.end()));
+	}
 }
 
 inline void DLL::clear() noexcept
