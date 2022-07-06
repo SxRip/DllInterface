@@ -3,7 +3,7 @@
 
 ### You can take this from "Module" folder.
 
-The class implemented with <map> (module name and own module).
+The class implemented with map (module name and own module).
 
 Methods:
 ```
