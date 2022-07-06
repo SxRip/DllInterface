@@ -21,7 +21,7 @@
     <ClInclude Include="framework.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="ExplameDll.h">
+    <ClInclude Include="ExampleDll.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="pch.h">
@@ -35,7 +35,7 @@
     <ClCompile Include="pch.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="ExplameDll.cpp">
+    <ClCompile Include="ExampleDll.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>

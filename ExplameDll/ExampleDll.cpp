@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "ExplameDll.h"
+#include "ExampleDll.h"
 
 void SafeCloseHanle(HANDLE& handle)
 {
