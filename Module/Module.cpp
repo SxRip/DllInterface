@@ -32,26 +32,18 @@ void DLL::pop_back() noexcept
 {
 	if (_modules.size() > 0)
 	{
-		SafeFreeLibrary((--(_modules.end()))->second);
-		_modules.erase(--(_modules.end()));
+		auto it = _modules.end(); --it;
+
+		SafeFreeLibrary(it->second);
+		_modules.erase(it);
 	}
 }
 
-inline void DLL::clear() noexcept
+void DLL::clear() noexcept
 {
 	for (auto& elem : _modules)
 		SafeFreeLibrary(elem.second);
 	_modules.clear();
-}
-
-const size_t DLL::size() const noexcept
-{
-	return _modules.size();
-}
-
-void DLL::push_back(const char* dllName, HMODULE& dllInfo) noexcept
-{
-	_modules.emplace(dllName, dllInfo);
 }
 
 bool DLL::push_back(const char* dllName) noexcept
@@ -65,7 +57,7 @@ bool DLL::push_back(const char* dllName) noexcept
 	return true;
 }
 
-void DLL::push_back(HMODULE& dllInfo) noexcept
+void DLL::push_back(HMODULE dllInfo) noexcept
 {
 	char cdllPath[MAX_PATH]{};
 	GetModuleFileName(dllInfo, cdllPath, sizeof(cdllPath));
