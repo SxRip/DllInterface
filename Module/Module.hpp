@@ -57,7 +57,7 @@ _Ty DLL::get_func(const char* functionName, const char* dllName) noexcept
 template<class _Ty>
 inline _Ty DLL::get_func(const char* functionName) const noexcept
 {
-	for (auto& elem : _modules)
+	for (const auto& elem : _modules)
 	{
 		FARPROC func = GetProcAddress(elem.second, functionName);
 
