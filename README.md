@@ -3,14 +3,6 @@
 
 ### In the project exists 2 solution for demonstration the class work
 
-For compilation: 
-* Go to Project Properties ->
-  * Configuration -> All configurations
-  * Configuration properties -> Additionally
-  * Character set -> Use multibyte encoding
-
-### (You must do this for both projects.)
-
 ### You can take this class from "Module" folder.
 
 The class implemented with map (module name and own module).
