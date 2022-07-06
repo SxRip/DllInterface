@@ -17,24 +17,24 @@ public:
 	_Ty get_func(const char* functionName, const char* dllName) noexcept;
 
 	template <class _Ty>
-	_Ty get_func(const char* functionName) noexcept;
+	inline _Ty get_func(const char* functionName) const noexcept;
 
 	void pop_front() noexcept;
 	void pop_back() noexcept;
 	void clear() noexcept;
 
-	const size_t size() const noexcept;
+	inline size_t size() const noexcept { return _modules.size(); };
 
-	void push_back(const char* dllName, HMODULE& dllInfo) noexcept;
+	inline void push_back(const char* dllName, HMODULE dllInfo) noexcept { _modules.emplace(dllName, dllInfo); };
 	bool push_back(const char* dllName) noexcept;
-	void push_back(HMODULE& dllInfo) noexcept;
+	void push_back(HMODULE dllInfo) noexcept;
 
 private:
 	std::map<const char*, HMODULE> _modules;
 };
 
 template<class _Ty>
-inline _Ty DLL::get_func(const char* functionName, const char* dllName) noexcept
+_Ty DLL::get_func(const char* functionName, const char* dllName) noexcept
 {
 	if (_modules.size() > 0)
 	{
@@ -55,7 +55,7 @@ inline _Ty DLL::get_func(const char* functionName, const char* dllName) noexcept
 }
 
 template<class _Ty>
-inline _Ty DLL::get_func(const char* functionName) noexcept
+inline _Ty DLL::get_func(const char* functionName) const noexcept
 {
 	for (auto& elem : _modules)
 	{
