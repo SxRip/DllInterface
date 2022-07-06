@@ -7,6 +7,7 @@
 
 For compilation: 
 * Go to Project Properties ->
+  * Configuration -> All configurations
   * Configuration properties -> Additionally
   * Character set -> Use multibyte encoding
 
