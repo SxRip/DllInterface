@@ -102,17 +102,17 @@ push_back has 3 implementations wich takes the HMODULE, const char* and HMODULE,
 # Syntax
 
 ```
-void push_back(const char* dllName, HMODULE& dllInfo) noexcept;
+void push_back(const char* dllName, HMODULE dllInfo) noexcept;
 
 bool push_back(const char* dllName) noexcept;
   
-void push_back(HMODULE& dllInfo) noexcept;
+void push_back(HMODULE dllInfo) noexcept;
 ```
 
 FIRST METHOD:
 
 ```
-void push_back(const char* dllName, HMODULE& dllInfo) noexcept;
+void push_back(const char* dllName, HMODULE dllInfo) noexcept;
 ```
 
 ## Parameters
@@ -125,7 +125,7 @@ A const char pointer that contains a name of the dll.
 
 [in] dllInfo
 
-Type: HMODULE&
+Type: HMODULE
 
 A reference that contains the initialized HMODULE object.
 
@@ -158,13 +158,13 @@ If the method fails, the return value is false.
 THIRD METHOD:
 
 ```
-void push_back(HMODULE& dllInfo) noexcept;
+void push_back(HMODULE dllInfo) noexcept;
 ```
 
 ## Parameters
 [in] dllInfo
 
-Type: HMODULE&
+Type: HMODULE
 
 A reference that contains the initialized HMODULE object.
 
