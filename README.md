@@ -22,7 +22,7 @@ push_back
 get_func it's a template method. He has 2 implementations wich takes the function prototype: typedef TYPE (*TYPENAME)(PARAMETERS);
 Explame: typedef bool (*KillProcess)(const std::string&);
 
-## CODE EXPLAME:
+## CODE EXAMPLE:
 ```
 typedef bool (*KillProcess)(const std::string&);
 
