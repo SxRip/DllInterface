@@ -1,7 +1,6 @@
 #pragma once
 #include <Windows.h>
 #include <map>
-#include <algorithm>
 #include <string>
 
 void SafeFreeLibrary(HMODULE& hModule);
