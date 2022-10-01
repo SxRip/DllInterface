@@ -23,7 +23,7 @@ get_func it's a template method. He has 2 implementations wich takes the functio
 Explame: typedef bool (*KillProcess)(const std::string&);
 
 ## CODE EXAMPLE:
-```
+``` C++
 typedef bool (*KillProcess)(const std::string&);
 
 KillProcess pfnKillProcess = modules.get_func<KillProcess>("KillProcess", "exmplamedll.dll");
@@ -31,7 +31,7 @@ KillProcess pfnKillProcess = modules.get_func<KillProcess>("KillProcess", "exmpl
 
 # Syntax
 
-```
+``` C++
 template <class _Ty>
 _Ty get_func(const char* functionName, const char* dllName) noexcept;
 
@@ -41,7 +41,7 @@ _Ty get_func(const char* functionName) noexcept;
 ```
 
 ## FIRST METHOD:
-```
+``` C++
 template <class _Ty>
 _Ty get_func(const char* functionName, const char* dllName) noexcept;
 ```
@@ -68,7 +68,7 @@ If the method fails, the return value is nullptr (NULL).
 
 ## SECOND METHOD:
 
-```
+``` C++
 template <class _Ty>
 _Ty get_func(const char* functionName) noexcept;
 ```
@@ -93,7 +93,7 @@ push_back has 3 implementations wich takes the HMODULE, const char* and HMODULE,
 
 # Syntax
 
-```
+``` C++
 void push_back(const char* dllName, HMODULE dllInfo) noexcept;
 
 bool push_back(const char* dllName) noexcept;
@@ -103,7 +103,7 @@ void push_back(HMODULE dllInfo) noexcept;
 
 FIRST METHOD:
 
-```
+``` C++
 void push_back(const char* dllName, HMODULE dllInfo) noexcept;
 ```
 
@@ -129,7 +129,7 @@ This method add the dll name and initialized HMODULE object to map object in the
 
 SECOND METHOD:
 
-```
+``` C++
 bool push_back(const char* dllName) noexcept;
 ```
 
@@ -149,7 +149,7 @@ If the method fails, the return value is false.
 
 THIRD METHOD:
 
-```
+``` C++
 void push_back(HMODULE dllInfo) noexcept;
 ```
 
